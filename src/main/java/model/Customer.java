@@ -9,16 +9,23 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Document
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Customer {
-    @Id
-   private ObjectId _id_;
+public class Customer extends BaseEntity {
+
+    private String name;
     private PersonalInformation personalinfo;
+    private List<Address> address= new ArrayList<Address>();
+    private String customerType;
+
+
 
 
 

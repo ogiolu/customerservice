@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PersonalInformation {
+public class PersonalInformation extends BaseEntity  {
     private String firstName;
     private String lastName;
     private String middleName;
@@ -18,5 +18,8 @@ public class PersonalInformation {
     private String gender;
     private List<String> phoneNumber= new ArrayList<String>();
     private List<String>  email =new ArrayList<String>();
+    private String maritalStatus;
+
+
 
 }

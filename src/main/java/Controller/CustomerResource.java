@@ -5,5 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/rest/v1/customer")
-public class CustomerResource {
+public class CustomerResource extends BaseController {
+
+    
 }
