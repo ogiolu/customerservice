@@ -1,4 +1,4 @@
-package model;
+package com.joebas.customerservice.model;
 
 import lombok.*;
 
@@ -19,7 +19,5 @@ public class PersonalInformation extends BaseEntity  {
     private List<String> phoneNumber= new ArrayList<String>();
     private List<String>  email =new ArrayList<String>();
     private String maritalStatus;
-
-
 
 }
