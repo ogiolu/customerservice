@@ -20,9 +20,7 @@ public class CustomerResource {
 
     @PostMapping("/save")
     public Mono<Customer> save(@RequestBody CustomerRequest customerRequest){
-        Customer customer = new Customer();
-        BeanUtils.copyProperties(customerRequest,customer);
-        return customerService.createCustomer(customer);
+        return customerService.createCustomer(customerRequest);
 
     }
     @GetMapping("/find/{id}")

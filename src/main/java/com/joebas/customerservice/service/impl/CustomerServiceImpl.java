@@ -1,6 +1,8 @@
 package com.joebas.customerservice.service.impl;
 
 import com.joebas.customerservice.model.Customer;
+import com.joebas.customerservice.request.CustomerRequest;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
@@ -15,7 +17,9 @@ public class CustomerServiceImpl implements CustomerService{
     private CustomerRepository customerRepository;
 
     @Override
-    public Mono<Customer> createCustomer(Customer customer) {
+    public Mono<Customer> createCustomer(CustomerRequest customerRequest) {
+        Customer customer = new Customer();
+        BeanUtils.copyProperties(customerRequest,customer);
        return  customerRepository.insert(customer);
     }
 

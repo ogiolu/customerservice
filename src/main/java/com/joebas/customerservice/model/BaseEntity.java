@@ -27,7 +27,6 @@ public abstract class BaseEntity  implements Serializable{
         private Long version;
 
 
-
         private Boolean delete = Boolean.FALSE;
 
 

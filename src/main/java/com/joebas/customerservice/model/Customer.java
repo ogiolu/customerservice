@@ -15,12 +15,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Customer  {
+public class Customer extends BaseEntity {
     @Id
     private String id;
     private String name;
-    //private PersonalInformation personalinfo;
-    //private List<Address> address= new ArrayList<Address>();
+    private PersonalInformation personalinfo;
+    private List<Address> address= new ArrayList<Address>();
     private String customerType;
 
 }
